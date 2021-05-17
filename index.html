@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>To Atyusha</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">##</span><br/>
+			<span class="comments"># Hi, Atyusha!!!😃</span><br/>
+			<span class="comments"># Ei site ta ami tomar jonne baniyechhi... kichhu bolar jonne... Hope you will like it👉👈</span><br/>
+			<span class="comments"># Asole onek din dhorei banachhilam site ta... aj complete holo arr ki😅</span><br/>
+			<span class="comments">##</span><br/>
+			<span class="string">So, bapar ta hochhe... amar tomake khub bhalo lage...😶</span><br/>
+			<span class="string">I know, tomay eta ami ageo onekbar bolechhi...😅</span><br/>
+			<span class="string">Kintu bissas koro... kokhono emni emni, ba mithhe bolini...😶</span><br/>
+			<span class="string">Sottie, onek onek... bhalolage amar tomake😊</span><br/>
+			<span class="string">Tomar gaan sunte, tomar sathe kotha bolte, tomar photos e react korte...sob kichhuie khub pochhonder amar...😃</span><br/>
+			<span class="string">Ohh btw! I forget to mention... tumi khub cute, arr khub misti o...😊</span><br/>
+			<span class="comments"># So, I want to confess that👉👈</span><br/>
+			<span class="string">I really want to be with you... in your good times as well as in your bad times too...😊</span><br/>
+			<span class="string">I love you...💖</span><br/>
+			<span class="string">Will you be my girlfriend?😶</span><br/>
+			<br/><br/><span class="placeholder"></span><span class="placeholder"></span>Love you 3000...<br/>
+			<br/><br/><span class="comments"># Hope egulo dekhar por... tumi raag kore amake abar block kore diyo na...😓</span><br/>
+			<span class="comments"># I will be waiting for your responds...😊</span><br/>
+			<span class="comments"># Ohh btw! I know ajj kono special day noy... February aste ekhono onek deri arr ajj e complete holo eta, tai ajj e bolei dilam puro puri😊</span><br/>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					I really Love you...👉👈
+				</div>
+				<div id="loveu">
+					Love you 3000...<br/>
+					<div class="signature">- goutam</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="copyright">
+		Copyright © 2021 <a href='https://www.goutam363.com'>goutam363</a>
+	</div>
+</div>
+<script type="text/javascript">
+	var offsetX = $("#loveHeart").width() / 2;
+	var offsetY = $("#loveHeart").height() / 2 - 55;
+	var together = new Date();
+	// 此处月份介于 0 ~ 11 之间。用本地时间表示，如 8 月要用 7 表示。
+	together.setFullYear(2018, 10, 5);
+	together.setHours(15);
+	together.setMinutes(0);
+	together.setSeconds(0);
+	together.setMilliseconds(0);
+
+	if (!document.createElement('canvas').getContext) {
+		var msg = document.createElement("div");
+		msg.id = "errorMsg";
+		msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+		document.body.appendChild(msg);
+		$("#code").css("display", "none")
+		$("#copyright").css("position", "absolute");
+		$("#copyright").css("bottom", "10px");
+		document.execCommand("stop");
+	} else {
+		setTimeout(function () {
+			startHeartAnimation();
+		}, 5000);
+
+		timeElapse(together);
+		setInterval(function () {
+			timeElapse(together);
+		}, 500);
+
+		adjustCodePosition();
+		$("#code").typewriter();
+	}
+</script>
+</body>
+</html>
